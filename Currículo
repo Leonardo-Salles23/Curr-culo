@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <style>
+        /* Reset básico */
+        body, h1, h2, h3, p, ul, li, form {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo geral */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .intro h1 span {
+            color: #4CAF50;
+        }
+
+        /* Seções */
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 8px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .projetos-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .projeto {
+            flex: 1;
+            min-width: 200px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-ver-mais {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .detalhes {
+            display: none;
+            margin-top: 10px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        #certificados {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificados-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .certificado {
+            flex: 1;
+            min-width: 300px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .certificado h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .certificado p {
+            margin-bottom: 10px;
+        }
+
+        .certificado strong {
+            color: #333;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        form button {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #45a049;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#certificados">Certificados</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="intro">
+            <h1>Olá, eu sou <span>Seu Nome</span></h1>
+            <p>Desenvolvedor Front-End | Apaixonado por Tecnologia e Aprendizado</p>
+        </div>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Sou um desenvolvedor front-end iniciante com experiência em HTML, CSS e JavaScript. Sempre busco aprender novas tecnologias e melhorar minhas habilidades.</p>
+    </section>
+
+    <section id="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="projetos-container">
+            <div class="projeto">
+                <h3>Projeto 1</h3>
+                <p>Descrição do projeto 1.</p>
+                <button class="btn-ver-mais" data-projeto="1">Ver Mais</button>
+                <div class="detalhes" id="detalhes-1">
+                    <p>Detalhes sobre o projeto 1...</p>
+                </div>
+            </div>
+            <div class="projeto">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto 2.</p>
+                <button class="btn-ver-mais" data-projeto="2">Ver Mais</button>
+                <div class="detalhes" id="detalhes-2">
+                    <p>Detalhes sobre o projeto 2...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificados">
+        <h2>Certificados</h2>
+        <div class="certificados-container">
+            <div class="certificado">
+                <h3>Certificado em Lógica de Programação</h3>
+                <p>Concluído em: <strong>Agosto de 2024</strong></p>
+                <p>Descrição: Certificado que atesta conhecimentos fundamentais em lógica de programação, incluindo algoritmos e estruturas de dados.</p>
+            </div>
+            <div class="certificado">
+                <h3>Certificado em JavaScript do Zero</h3>
+                <p>Concluído em: <strong>Agosto de 2024</strong></p>
+                <p>Descrição: Certificado que demonstra habilidades adquiridas em JavaScript, desde os conceitos básicos até a manipulação avançada de dados e eventos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="form-contato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="mensagem-confirmacao" class="hidden">
+            <p>Obrigado pela sua mensagem!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Seu Nome. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Script para mostrar/ocultar detalhes dos projetos
+        document.addEventListener('DOMContentLoaded', () => {
+            const botoesVerMais = document.querySelectorAll('.btn-ver-mais');
+
+            botoesVerMais.forEach(botao => {
+                botao.addEventListener('click', () => {
+                    const idDetalhes = `detalhes-${botao.dataset.projeto}`;
+                    const detalhes = document.getElementById(idDetalhes);
+                    detalhes.style.display = detalhes.style.display === 'none' || detalhes.style.display === '' ? 'block' : 'none';
+                });
+            });
+
+            // Script para o formulário de contato
+            const formulario = document.getElementById('form-contato');
+            const mensagemConfirmacao = document.getElementById('mensagem-confirmacao');
+
+            formulario.addEventListener('submit', (e) => {
+                e.preventDefault(); // Evita o envio padrão do formulário
+                mensagemConfirmacao.classList.remove('hidden'); // Mostra a mensagem de confirmação
+                formulario.reset(); // Reseta o formulário
+            });
+        });
+    </script>
+</body>
+</html>
